@@ -40,7 +40,7 @@ while True:
         class get_sysinfo:
 
             @staticmethod
-            def name_pc():  # Получаем имя ПК и текущего пользователя
+            def name_pc():  
                 for q in comp_system[0].Properties_:
                     if q.Name == 'Name':
                         slovar.append({'Имя компьютера': q.Value})
@@ -135,7 +135,7 @@ while True:
 
             @staticmethod
             def file_output():
-                with open(f'//winwsus/inv21/555/{act}.txt', 'a+',
+                with open(f'Patch {act}.txt', 'a+',  # Путь выгрузки текстового файла
                           encoding='UTF-8') as file_out:
                     for q in slovar:
                         for key, val in q.items():
